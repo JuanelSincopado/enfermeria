@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import firebase from "firebase";
+import firebase from "firebase/app";
+import 'firebase/firestore';
 
 const usePersonal = () => {
     const [personal, setPersonal] = useState([]);
@@ -9,13 +10,15 @@ const usePersonal = () => {
     });
 
     const traerPersonal = () => {
-        firebase
-            .firestore()
-            .collection("users")
-            .get()
-            .then((query) => {
-                setPersonal(query.docs);
-            });
+        // firebase
+        //     .firestore()
+        //     .collection("users")
+        //     .get()
+        //     .then((query) => {
+        //         query.docs.map(doc => {
+        //             console.log(doc.data());
+        //         })
+        //     });
     };
 
     return {

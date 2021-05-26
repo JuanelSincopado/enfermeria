@@ -1,4 +1,33 @@
-.tarjetaPersonal__contenedor{
+.listaPersonal__buscador {
+    background-color: transparent;
+    border-bottom: solid 1px #e1e1e1;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    transition: all 0.2s ease;
+    padding: 10px;
+}
+
+.listaPersonal__buscador > i {
+    flex: 0.1;
+    font-size: 20px;
+    color: var(--color-icon);
+}
+
+.listaPersonal__buscador > input {
+    flex: 1;
+    font-size: 16px;
+    border: none;
+    outline-width: 0;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.tarjetaPersonal__contenedor {
     width: 90%;
     margin: auto;
     padding: 20px;
@@ -10,31 +39,54 @@
     transition: all 0.2s ease;
 }
 
-.tarjetaPersonal__contenedor:hover{
+.tarjetaPersonal__contenedor:hover {
     transition: all 0.2s ease;
     transform: translateY(-5px);
 }
 
-.tarjetaPersonal__identidad{
+.tarjetaPersonal__identidad {
     display: flex;
     align-items: center;
 }
 
-.tarjetaPersonal__identidad > img{
+.tarjetaPersonal__identidad > img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
 }
 
-.tarjetaPersonal__nombre{
+.tarjetaPersonal__nombre {
     margin-left: 20px;
     font-size: 18px;
 }
 
-@media(min-width: 768px){
+.listaPersonal__boton-mobile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: var(--sombra);
+    background-color: var(--color-primario);
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
 
-    .listaPersonal__contenedor{
-        width: 90%;
+.listaPersonal__boton {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .personal__contenedor{
+        flex: 1;
+    }
+
+    .listaPersonal__contenedor {
+        width: 100%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -42,29 +94,70 @@
         margin-top: 50px;
     }
 
-    .tarjetaPersonal__contenedor{
+    .tarjetaPersonal__contenedor {
         width: 300px;
         margin: auto;
     }
 
-    .tarjetaPersonal__identidad{
+    .tarjetaPersonal__identidad {
         flex-direction: column;
     }
 
-    .tarjetaPersonal__identidad > img{
+    .tarjetaPersonal__identidad > img {
         width: 100px;
         height: 100px;
     }
 
-    .tarjetaPersonal__nombre{
+    .tarjetaPersonal__nombre {
         margin-top: 18px;
         margin-left: 0;
         font-size: 20px;
     }
+
+    .listaPersonal__boton-mobile {
+        display: none;
+    }
+
+    .listaPersonal__opciones {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .listaPersonal__buscador {
+        width: 250px;
+        margin-left: 40px;
+        margin-top: 0;
+    }
+
+    .listaPersonal__boton {
+        display: inline;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: var(--sombra);
+        background-color: var(--color-primario);
+        color: white;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-right: 40px;
+    }
+
+    .personal__divisor{
+        display: flex;
+        justify-content: center;
+    }
+
+    .listaPersonal__boton:hover{
+        transform: translateY(-5px);
+        transition: all 0.2s ease;
+    }
 }
 
-@media(min-width: 1110px){
-    .listaPersonal__contenedor{
+@media (min-width: 1110px) {
+    .listaPersonal__contenedor {
         grid-template-columns: repeat(3, auto);
         grid-gap: 50px;
     }
