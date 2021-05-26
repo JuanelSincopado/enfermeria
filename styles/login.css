@@ -1,0 +1,88 @@
+.login__contenedor {
+    display: grid;
+    place-items: center;
+    padding-top: 20vh;
+}
+
+.login__contenedor > img {
+    border-radius: 50%;
+    width: 134px;
+    height: 134px;
+}
+
+.login__form {
+    margin-top: 20px;
+    width: 80%;
+    background-color: white;
+}
+
+.login__formGroup {
+    width: 100%;
+    height: 62px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ececec;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+
+.login__input {
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    font-size: 16px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    outline-width: 0;
+    border-radius: 10px;
+}
+
+
+.login__olvideClave {
+    float: right;
+    border: none;
+    background-color: transparent;
+    outline-width: 0;
+    cursor: pointer;
+    font-style: italic;
+}
+
+.login__iniciarSesion {
+    width: 100%;
+    border: none;
+    background-color: var(--verde);
+    height: 62px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.login__iniciarSesion:hover {
+    box-shadow: 0 0 5px 0.1px var(--verde);
+    transition: 0.2s ease;
+}
+
+.login__error{
+    background-color: rgb(211, 80, 80);
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .login__form {
+        width: 600px;
+    }
+
+    .login__error{
+        width: 600px;
+    }
+}

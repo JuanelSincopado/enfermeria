@@ -1,0 +1,118 @@
+.navbar__container {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 1px #e1e1e1;
+    background-color: white;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.navbar__icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    border: solid 1px #e1e1e1;
+    border-radius: 10px;
+    color: black;
+}
+
+.navbar__menuContenedor {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.2s ease;
+    height: 200px;
+}
+
+.navbar__menuContenedor.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.2s ease;
+    z-index: 3;
+    text-align: center;
+}
+
+.navbar__li{
+    padding: 20px 0;
+    background-color: var(--color-primario);
+}
+
+.navbar__li.active{
+    background-color: var(--verde);
+    color: black;
+}
+
+.navbar__enlace{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media(min-width: 768px){
+
+    .navbar__container{
+        font-size: 1.1rem;
+    }
+
+    .navbar__logo{
+        justify-self: start;
+        margin-left: 50px;
+    }
+
+    .navbar__menuContenedor{
+        justify-self: end;
+        position: static;
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        list-style: none;
+        text-align: center;
+        transition: all 0.2s ease;
+        height: 0px;
+        width: 580px;
+        margin-right: 60px;
+        margin-top: -30px ;
+    }
+
+    .navbar__icon{
+        display: none;
+    }
+
+    .navbar__li{
+        background-color: transparent;
+        padding: 0;
+        
+    }
+
+    .navbar__li:hover{
+        border-bottom: solid 2px var(--azul) ;
+
+    }
+
+    .navbar__li.active{
+        background-color: transparent;
+        border-bottom: solid 2px var(--azul) ;
+    }
+
+    .navbar__enlace{
+        color: black;
+    }
+}

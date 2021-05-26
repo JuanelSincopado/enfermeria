@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "patient": {
+    "id": "",
+    "firstName": "Isaac",
+    "lastName": "Cabello",
+    "birthday": "1997-05-17",
+    "idNumber": "25944366",
+    "sex": "Masculino",
+    "civilStatus": "Soltero",
+    "address": "Calle 11A",
+    "contactInfo": {
+      "homeNumber": "",
+      "mobileNumber": "3227599891"
+    },
+    "eps": "SURA"
+  },
+  "user": {
+    "id": "",
+    "firstName": "Isaac",
+    "lastName": "Cabello",
+    "idNumber": "25944366"
+  },
+  "timestamp": "1997-05-17",
+  "evaluation": "evaluation",
+  "attachments": [
+    {
+      "name": "Document name",
+      "url": "http://link.com"
+    }
+  ],
+  "companion": {
+    "firstName": "Juan",
+    "lastName": "Cabello",
+    "relationship": "Hermano"
+  }
+}

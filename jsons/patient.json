@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "firstName": "Isaac",
+  "lastName": "Cabello",
+  "birthday": "1997-05-17",
+  "idNumber": "25944366",
+  "sex": "Masculino",
+  "civilStatus": "Soltero",
+  "address": "Calle 11A",
+  "contactInfo": {
+    "homeNumber": "",
+    "mobileNumber": "3227599891",
+    "email": ""
+  },
+  "eps": "SURA"
+}

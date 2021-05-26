@@ -1,0 +1,13 @@
+{
+  "id": "",
+  "role": "admin",
+  "firstName": "Isaac",
+  "lastName": "Cabello",
+  "idNumber": "25944366",
+  "sex": "Masculino",
+  "address": "Calle 11A",
+  "contactInfo": {
+    "mobileNumber": "3227599891",
+    "email": ""
+  }
+}
