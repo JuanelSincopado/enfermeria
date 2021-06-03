@@ -1,19 +1,20 @@
-import { useContext } from "react";
-import PersonalContext from "../../context/personal/PersonalContext";
+const TarjetaPersonal = ({ data, handleOnClick }) => {
 
-const TarjetaPersonal = ({data}) => {
-
-    const { setUsuario } = useContext(PersonalContext);
-
-    return ( 
-        <div href="/perfil" className="tarjetaPersonal__contenedor" onClick={() => setUsuario(data)}>
+    return (
+        <div
+            href="/perfil"
+            className="tarjetaPersonal__contenedor"
+            onClick={() => handleOnClick(data)}
+        >
             <div className="tarjetaPersonal__identidad">
                 <img src={data.img} alt="Foto" />
 
-                <p className="tarjetaPersonal__nombre">{data.firstName} {data.lastName}</p>
+                <p className="tarjetaPersonal__nombre">
+                    {data.name}
+                </p>
             </div>
         </div>
-     );
-}
- 
+    );
+};
+
 export default TarjetaPersonal;

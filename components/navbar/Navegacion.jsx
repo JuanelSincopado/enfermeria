@@ -6,7 +6,7 @@ const Navegacion = () => {
             <ActiveLink activeClassName="active" href="/historias-clinicas">
                     <a className="navbar__enlace">Historias Clinicas</a>
                 </ActiveLink>
-                <ActiveLink activeClassName="active" href="#">
+                <ActiveLink activeClassName="active" href="/pacientes">
                     <a className="navbar__enlace">Pacientes</a>
                 </ActiveLink>
                 <ActiveLink activeClassName=" active" href="/personal">

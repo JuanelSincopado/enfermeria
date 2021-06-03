@@ -46,3 +46,13 @@
     font-size: 12px;
     margin-top: 10px;
 }
+
+@media(min-width: 768px){
+    .historiasClinicas__divisor{
+        display: flex;
+    }
+
+    .listaHistoriasClinicas{
+        flex: 1;
+    }
+}

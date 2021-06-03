@@ -1,8 +1,22 @@
+import { useContext } from "react";
+import PersonalContext from "../../context/personal/PersonalContext";
 import usePersonal from "../../hooks/personal/usePersonal";
 import TarjetaPersonal from "./TarjetaPersonal";
+import { useRouter } from "next/router";
+import Cargando from "../Cargando";
+import BotonCrear from "../BotonCrear";
 
 const ListaPersonal = () => {
-    const { personal } = usePersonal();
+    const { status, data } = usePersonal();
+
+    const { setUsuario } = useContext(PersonalContext);
+    const router = useRouter();
+
+    const handleOnClick = (data) => {
+        setUsuario(data);
+
+        router.push("/perfil");
+    };
 
     return (
         <div className="personal__contenedor">
@@ -11,19 +25,20 @@ const ListaPersonal = () => {
                     <i aria-hidden className="fas fa-search"></i>
                     <input type="text" placeholder="Nombre, Apellido, etc" />
                 </div>
-
-                <button className="listaPersonal__boton">
-                    Crear Usuario
-                </button>
+                <BotonCrear direccion={'/crear-usuario'} title='Crear Usuario' />
             </div>
             <div className="listaPersonal__contenedor">
-                {personal.map((doc) => (
-                    <TarjetaPersonal data={doc.data()} key={doc.id} />
-                ))}
-
-                <button className="listaPersonal__boton-mobile">
-                    <i aria-hidden className="fas fa-plus"></i>
-                </button>
+                {status !== "loading" ? (
+                    data.map((doc) => (
+                        <TarjetaPersonal
+                            data={doc}
+                            key={doc.NO_ID_FIELD}
+                            handleOnClick={handleOnClick}
+                        />
+                    ))
+                ) : (
+                    <Cargando />
+                )}
             </div>
         </div>
     );

@@ -1,22 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
 }
 
-body{
+body {
     padding-top: 80px;
 }
 
-:root{
+:root {
     --verde: #94d34e;
     --azul: #006599;
-    --color-primario: #6200EE;
+    --color-primario: #6200ee;
     --sombra: 0px 1px 2px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.12),
-    0px 1px 8px rgba(0, 0, 0, 0.1);
+        0px 1px 8px rgba(0, 0, 0, 0.1);
     --color-icon: #3a3a3a;
+}
+
+.cargando {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+/* BARRA VOLVER */
+
+.barVolver__contenedor {
+    background-color: var(--color-primario);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -80px;
+}
+
+.barVolver__a {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline-width: 0;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    padding-top: 6px;
+}
+
+.barVolver__p {
+    margin-right: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .barVolver__a {
+        margin-left: 100px;
+    }
+
+    .barVolver__p {
+        margin-right: 100px;
+    }
+}
+
+/* BOTON CREAR */
+
+.botonCrear {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: var(--sombra);
+    background-color: var(--color-primario);
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    color: white;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 4px;
+}
+
+@media (min-width: 768px) {
+    .botonCrear {
+        width: 55px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-right: 40px;
+        transition: all 0.2s ease;
+        position: static;
+    }
+
+    .botonCrear:hover {
+        transition: all 0.2s ease;
+        transform: translateY(-5px);
+    }
 }
